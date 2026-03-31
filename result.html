@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Log Analysis Result</h1>
+</header>
+
+<div class="container">
+
+    <!-- Counts -->
+    <div class="card">
+        <h2>Summary</h2>
+        <p>Total Logs: {{ result.total }}</p>
+        <p>Normal Logs: {{ result.normal }}</p>
+        <p>Suspicious Logs: {{ result.anomalies }}</p>
+    </div>
+
+    <!-- Table -->
+    <div class="card">
+        <h2>Log Table</h2>
+        <table>
+            <tr>
+                <th>#</th>
+                <th>Failed</th>
+                <th>Accepted</th>
+                <th>Sudo</th>
+                <th>Status</th>
+            </tr>
+
+            {% for row in logs %}
+            <tr>
+                <td>{{ loop.index }}</td>
+                <td>{{ row.failed_login }}</td>
+                <td>{{ row.accepted_login }}</td>
+                <td>{{ row.sudo_usage }}</td>
+                <td class="{{ 'danger' if row.anomaly == -1 else 'normal' }}">
+                    {{ 'Suspicious' if row.anomaly == -1 else 'Normal' }}
+                </td>
+            </tr>
+            {% endfor %}
+
+        </table>
+    </div>
+
+</div>
+
+</body>
+</html>

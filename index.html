@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smart Linux Log Analyzer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    <h1>Smart Linux Log Analyzer</h1>
+    <p>Select Analysis Mode</p>
+</header>
+
+<div class="container">
+
+    <!-- Option 1 -->
+    <div class="card">
+        <h2>1. Analyze Default Log</h2>
+        <form action="/self_log" method="POST">
+            <button type="submit">Run Self Log Analysis</button>
+        </form>
+    </div>
+
+    <!-- Option 2 -->
+    <div class="card">
+        <h2>2. Upload Your Log File</h2>
+        <form action="/upload_log" method="POST" enctype="multipart/form-data">
+            <input type="file" name="logfile" required>
+            <button type="submit">Upload & Analyze</button>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

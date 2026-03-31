@@ -1,0 +1,50 @@
+body {
+    font-family: Arial;
+    background: linear-gradient(120deg,#2c3e50,#4ca1af);
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    color: white;
+    padding: 20px;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+button {
+    padding: 10px 20px;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.normal {
+    color: green;
+}
+
+.danger {
+    color: red;
+}

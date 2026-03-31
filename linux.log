@@ -1,0 +1,4 @@
+Jan 10 10:12:01 server sshd[1023]: Failed password for root from 192.168.1.10
+Jan 10 10:12:05 server sshd[1023]: Failed password for root from 192.168.1.10
+Jan 10 10:15:22 server sudo: session opened for user admin
+Jan 10 10:20:45 server sshd[1045]: Accepted password for user from 192.168.1.5
